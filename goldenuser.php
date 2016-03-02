@@ -10,15 +10,15 @@
   //}
   $userid = $_POST['id'];
   $tone = $_POST['tone'];
-  $url = 'http://forum1.hkgolden.com/ProfilePage.aspx?userid=' . $userid ;
+  $url = 'http://forum15.hkgolden.com/ProfilePage.aspx?userid=' . $userid ;
   $page_content = file_get_contents($url);
 
   //echo 1;
-  
+
   if (strpos ($page_content, $tone)){
     echo 1;
   } else {
     echo 2;
   }
-  
+
  ?>
