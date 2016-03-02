@@ -96,9 +96,19 @@ $("#golden").click(function() {
 });
 
 $("#submit").click(function() {
+    var regExp = /^[\d|a-zA-Z]+$/;
+    var str = $("#username").val();
     if ($("#pw").val() != $("#pwagain").val()) {
         $("#msg").html('<h3 class="fs-subtitle"><font color="red">密碼與確認密碼必需相同</font></h3>');
         return;
+    }
+    if ($("#username").val().length > 12) {
+        $("#msg").html('<h3 class="fs-subtitle"><font color="red">帳號長度不得大於12</font></h3>');
+        return;
+    }
+    if (!regExp.test(str)) {
+      $("#msg").html('<h3 class="fs-subtitle"><font color="red">帳號只能用英文或數字</font></h3>');
+      return;
     }
     $.ajax({
         type: 'POST',
