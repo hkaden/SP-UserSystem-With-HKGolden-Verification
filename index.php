@@ -91,9 +91,17 @@ if(!isset($_SESSION['token']) || $_SESSION['token']=='') {
       </form>
       </div>
       </fieldset>
+			<div class="pure-g">
+				<div class="pure-u-1-8">&nbsp;</div>
+				<div class="pure-u-18-24">
+					<div id="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+			</div>
       </form>
       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
       <script src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js'></script>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script>
       <script src="js/validation.min.js"></script>
       <script src="js/index.js"></script>
    </body>
